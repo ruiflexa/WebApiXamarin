@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WebApiXamarin"
+             x:Class="WebApiXamarin.MainPage" 
+             Title="App Exemplo WebApi">
+
+    <StackLayout Orientation="Vertical">
+
+        <StackLayout Padding="5, 5, 0, 0">
+            <Label Text="Add/Atualizar Produtos" 
+                   TextColor="Blue" />
+        </StackLayout>
+        <StackLayout Orientation="Vertical" 
+                     Padding="10, 0, 10, 0">
+            <Entry x:Name="txtNome"
+                   Placeholder="Nome do Produto" 
+                   FontSize="Small"
+                   />
+            <Entry x:Name="txtCategoria" 
+                Placeholder="Categoria"
+                   FontSize="Small"/>
+            <Entry x:Name="txtPreco"   
+                Placeholder="Preço" 
+                   FontSize="Small"/>
+            <Button x:Name="btnAdicionar"
+                    Text="Add Produto"
+                    Clicked="BtnAdicionar_OnClicked"
+                    />
+        </StackLayout>
+        <StackLayout Orientation="Vertical">
+            <ListView x:Name="listaProdutos" 
+                      ItemSelected="ListaProdutos_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="MenuItem_OnClicked" 
+                                          CommandParameter="{Binding .}" 
+                                          Text="Atualizar">
+
+                                </MenuItem>
+                                <MenuItem Clicked="MenuItemApagar_OnClicked"
+                                          CommandParameter="{Binding .}"
+                                          Text="Apagar" 
+                                          IsDestructive="True">
+
+                                </MenuItem>
+                            </ViewCell.ContextActions>
+                            <StackLayout>
+                                <Label Text="{Binding Nome}" />
+                                <Label Text="{Binding Categoria}" />
+                                <Label Text="{Binding Preco}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center" IsVisible="False"
+           VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>
