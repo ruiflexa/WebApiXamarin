@@ -9,7 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiXamarin.iOS", "WebApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiXamarin.UWP", "WebApiXamarin\WebApiXamarin.UWP\WebApiXamarin.UWP.csproj", "{54F2A43C-5184-4CA0-982A-CD1DD5896823}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiXamarin", "WebApiXamarin\WebApiXamarin\WebApiXamarin.csproj", "{A0F3DFB6-D2E2-43C9-8A29-E1AE5E3A4288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiXamarin", "WebApiXamarin\WebApiXamarin\WebApiXamarin.csproj", "{A0F3DFB6-D2E2-43C9-8A29-E1AE5E3A4288}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0A58C38-47BD-48BD-A96E-9A23AC28F9AF}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
